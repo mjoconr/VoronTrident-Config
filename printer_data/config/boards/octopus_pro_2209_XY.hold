@@ -1,0 +1,37 @@
+##  B Stepper - Left
+##  Connected to MOTOR_0
+##  Endstop connected to DIAG_0
+[stepper_x]
+step_pin: PG0
+dir_pin: PG1
+enable_pin: !PF15
+full_steps_per_rotation:200  #set to 400 for 0.9 degree stepper
+
+[tmc2209 stepper_x]
+uart_pin: PC4
+interpolate: False
+run_current: 1.0
+sense_resistor: 0.110
+
+[autotune_tmc stepper_x]
+motor: moons-ms17hd6p420I-04
+
+##  A Stepper - Right
+##  Connected to MOTOR_1
+##  Endstop connected to DIAG_1
+[stepper_y]
+step_pin: PF13
+dir_pin: PF12
+enable_pin: !PF14
+full_steps_per_rotation:200  #set to 400 for 0.9 degree stepper
+
+[tmc2209 stepper_y]
+uart_pin: PD11
+interpolate: False
+run_current: 1.0
+sense_resistor: 0.110
+
+[autotune_tmc stepper_y]
+motor: moons-ms17hd6p420I-04
+
+
