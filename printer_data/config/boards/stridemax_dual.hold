@@ -1,0 +1,38 @@
+[stepper_x]
+##    Connected to MOT1
+step_pin: stridemax_dual:gpio13
+dir_pin: !stridemax_dual:gpio23
+enable_pin: !stridemax_dual:gpio22
+
+##  Make sure to update below for your relevant driver (5160)
+[tmc5160 stepper_x]
+spi_software_sclk_pin: stridemax_dual:gpio2
+spi_software_mosi_pin: stridemax_dual:gpio3
+spi_software_miso_pin: stridemax_dual:gpio4
+#spi_bus: spi0_gpio4_gpio3_gpio2
+cs_pin: stridemax_dual:gpio21
+interpolate: False
+run_current: 1.0
+hold_current: 0.500
+##stealthchop_threshold: 0
+sense_resistor: 0.05
+
+[stepper_y]
+##    Connected to MOT0
+step_pin: stridemax_dual:gpio6
+dir_pin: !stridemax_dual:gpio5
+enable_pin: !stridemax_dual:gpio20
+
+##  Make sure to update below for your relevant driver (5160)
+[tmc5160 stepper_y] 
+## Soft SPI
+spi_software_sclk_pin: stridemax_dual:gpio2
+spi_software_mosi_pin: stridemax_dual:gpio3
+spi_software_miso_pin: stridemax_dual:gpio4
+#spi_bus: spi0_gpio4_gpio3_gpio2
+cs_pin: stridemax_dual:gpio1
+interpolate: False 
+run_current: 1.0
+hold_current: 0.5
+##stealthchop_threshold: 0
+sense_resistor: 0.05
